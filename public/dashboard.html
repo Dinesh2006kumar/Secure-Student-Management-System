@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎓 Student Management
+        </div>
+
+        <div class="nav-right">
+
+            <span id="userName">
+                User
+            </span>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="dashboard">
+
+        <!-- Header -->
+
+        <div class="dashboard-header">
+
+            <div>
+                <h1>Student Dashboard</h1>
+
+                <p>
+                    Manage student information securely.
+                </p>
+            </div>
+
+            <button id="addStudentBtn" class="add-btn">
+                + Add Student
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👨‍🎓
+                </div>
+
+                <div>
+                    <h3 id="studentCount">
+                        0
+                    </h3>
+
+                    <p>
+                        Total Students
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔐
+                </div>
+
+                <div>
+                    <h3>
+                        JWT
+                    </h3>
+
+                    <p>
+                        Authentication
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🗄️
+                </div>
+
+                <div>
+                    <h3>
+                        MongoDB
+                    </h3>
+
+                    <p>
+                        Database
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Student Table -->
+
+        <div class="students-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Student Records
+                </h2>
+
+                <button id="refreshBtn">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll Number</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+
+                        <tr>
+                            <td colspan="7">
+                                Loading students...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         ADD / EDIT MODAL
+    ========================== -->
+
+    <div id="studentModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+                    Add Student
+                </h2>
+
+                <button id="closeModal">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="studentForm">
+
+                <input
+                    type="hidden"
+                    id="studentId"
+                >
+
+
+                <label>
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                    required
+                >
+
+
+                <label>
+                    Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="rollNumber"
+                    placeholder="Enter roll number"
+                    required
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="Enter email"
+                    required
+                >
+
+
+                <label>
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Enter department"
+                    required
+                >
+
+
+                <label>
+                    Year
+                </label>
+
+                <input
+                    type="number"
+                    id="year"
+                    min="1"
+                    max="5"
+                    placeholder="Enter year"
+                    required
+                >
+
+
+                <label>
+                    Phone
+                </label>
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Enter phone number"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    Save Student
+                </button>
+
+            </form>
+
+            <p id="formMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

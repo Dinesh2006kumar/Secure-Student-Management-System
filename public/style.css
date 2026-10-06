@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 950px;
+    max-width: 100%;
+    min-height: 600px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.welcome-section {
+    width: 50%;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-section h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.welcome-section p {
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.security-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.security-info span {
+    font-size: 30px;
+}
+
+.security-info strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.security-info small {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.auth-section {
+    width: 50%;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.auth-section > div {
+    width: 100%;
+}
+
+.auth-section h2 {
+    font-size: 30px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   SWITCH LOGIN / REGISTER
+========================= */
+
+.switch-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.switch-text button {
+    border: none;
+    background: none;
+    color: #2563eb;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.switch-text button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+#loginMessage,
+#registerMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .welcome-section,
+    .auth-section {
+        width: 100%;
+    }
+
+    .welcome-section {
+        padding: 40px 30px;
+    }
+
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+
+    .auth-section {
+        padding: 40px 30px;
+    }
+}
